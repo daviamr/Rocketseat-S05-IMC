@@ -1,0 +1,80 @@
+/* default imports */
+@import './style.css';
+@import './reset.css';
+
+/* default styles */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --roboto: 'Roboto', sans-serif;
+    --bg: #040924;
+    --red: #F03E3E;
+    --white: #FFFFFF;
+    --black: #000000;
+    --op-black: #000000b3;
+    --title-color: #0C3440;
+    --green: #00453A;
+    --light-gray: #DCE2E9;
+    --gray: #49505780;
+    --dark-gray: #212529;
+    --blue: #02799D;
+
+}
+
+body {
+    position: relative;
+    font-family: var(--roboto);
+    font-size: 1.6rem;
+    background: var(--bg);
+
+    overflow-y: hidden;
+}
+
+/* default classes */
+.limiter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    padding: 0 2.2rem;
+}
+
+.sError {
+    height: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.hide {
+    display: none !important;
+}
+
+/* animation */
+
+@-webkit-keyframes rotate-90-cw {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-90-cw {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

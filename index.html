@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <title>Stage 05 | Projeto 02 - IMC</title>
+
+    <script src="./assets/js/index.js" defer></script>
+</head>
+
+<body>
+    <div class="sError" id="errorWrapper">
+        <span id="setError">Digite somente números</span>
+    </div>
+    <div class="limiter">
+        <main>
+
+            <div class="form_box">
+                <h1 class="form_legend">
+                    Cálculo de IMC
+                </h1>
+                <form id="form">
+
+                    <div class="input_wrapper">
+                        <label>
+                            Peso (kg)
+                        </label>
+                        <input type="text" maxlength="3" autocomplete="off" id="weight">
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label>
+                            Altura (m)
+                        </label>
+                        <input type="text" maxlength="4" placeholder="165" autocomplete="off" id="height">
+                    </div>
+
+                </form>
+                <button form="form" id="submit">Calcular IMC</button>
+            </div>
+        </main>
+
+    </div>
+
+    <div class="hide" id="modal">
+        <div class="modal_content">
+            <h1 id="resultIMC">Seu IMC é de <span id="total"></span></h1>
+            <img src="./assets/img/close.svg" alt="Botão de fechar" id="closeModal">
+        </div>
+    </div>
+
+</body>
+
+</html>
