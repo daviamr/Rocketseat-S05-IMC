@@ -3,21 +3,24 @@ const heightInput = document.getElementById('height');
 const submitBtn = document.getElementById('submit');
 //
 const setError = document.getElementById('errorWrapper');
-const modal = document.getElementById('modal');
-const closeModal = document.getElementById('closeModal');
 const IMC = document.getElementById('total');
+
+const modal = {
+    wrapper: document.getElementById('modal'),
+    buttonClose: document.getElementById('closeModal')
+}
 
 //events
 submitBtn.addEventListener('click', result);
 
-closeModal.addEventListener('click', () => {
-    hideHandler(modal, 'hide');
+modal.buttonClose.addEventListener('click', () => {
+    hideHandler(modal.wrapper, 'hide');
 });
 
 window.addEventListener('keydown', (e) => {
     if (e.code === 'Escape') {
-        if (modal.classList.length <= 0) {
-            hideHandler(modal, 'hide');
+        if (modal.wrapper.classList.length <= 0) {
+            hideHandler(modal.wrapper, 'hide');
         }
     }
 })
@@ -58,7 +61,7 @@ function result(e) {
             const total = calcIMC(weight, height);
 
             IMC.innerText = `${total}`
-            hideHandler(modal, 'hide');
+            hideHandler(modal.wrapper, 'hide');
 
             buttonHandler('Calcular IMC', '1')
             submitBtn.removeAttribute('disabled');
